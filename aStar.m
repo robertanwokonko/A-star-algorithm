@@ -40,7 +40,7 @@ function [optimalPath, totalCost] = aStar()
     goal.parent = [];
     goal.distance = 0;
     
-    openCells = [openCells; start];
+    openCells = [openCells; start]; % Add start to the list. openCells.append(start)
 
     while ~isempty(openCells)
         current = openCells(1);
