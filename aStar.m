@@ -19,7 +19,7 @@ function [optimalPath, totalCost] = aStar()
     % ];
 
     % We can generate a randomized grid of ones and zeros. For example: a 5 by 5 per the assignment
-    % Note: The grid starts at [1,1] and ends at [4, 4]
+    % Note: The grid starts at [4, 4] and ends at [1, 1]
 
     grid = generateGrid(5, 5);
     
