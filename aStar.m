@@ -42,7 +42,8 @@ function [optimalPath, totalCost] = aStar()
     
     openCells = [openCells; start]; % Add start to the list. openCells.append(start)
 
-    while ~isempty(openCells) % while openCells is not empty
+    % while openCells is not empty
+    while ~isempty(openCells)
         current = openCells(1);
         openCells = openCells(2:end);
 
