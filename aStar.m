@@ -47,11 +47,11 @@ function [optimalPath, totalCost] = aStar()
         current = openCells(1);
         openCells = openCells(2:end);
 
-        if isVisited(current)
+        if isVisited(current) #have I visted the current cell?
             continue;
         end
 
-        if isGoal(current)
+        if isGoal(current) #Is this current cell the goal cell?
             optimalPath = flip(path(current));
             totalCost = length(visitedCells);
             
@@ -60,7 +60,7 @@ function [optimalPath, totalCost] = aStar()
             return;
         end
 
-        visitedCells = [visitedCells; current]; % add to visited list
+        visitedCells = [visitedCells; current]; % add current cell to visited list
 
         x = current.pos(1);
         y = current.pos(2);
